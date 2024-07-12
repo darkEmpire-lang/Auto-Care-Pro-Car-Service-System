@@ -1,0 +1,93 @@
+/* src/styles/Home.css */
+
+.hero-section {
+  position: relative;
+  height: 100vh; /* Adjust as needed */
+  width: 100%; /* Ensure the section covers the full width */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-image 0.5s ease;
+  animation: backgroundAnimation 15s infinite; /* Total duration to display the image */
+}
+
+@keyframes backgroundAnimation {
+  0%, 100% {
+    background-image: url('../../Pages/images/bg2.jpg'); /* Adjust based on your folder structure */
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  font-family: 'Arial', sans-serif; /* Change to a suitable font */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+}
+
+.hero-content h1 {
+  font-size: 3em; /* Adjust as needed */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.5em; /* Adjust as needed */
+  margin-bottom: 20px;
+}
+
+.hero-content .btn {
+  font-size: 1.2em; /* Adjust as needed */
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Add a dark overlay to the hero section for better text visibility */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+/* Service section styling */
+.services-section {
+  margin-top: 50px; /* Adjust as needed */
+  padding: 20px; /* Adjust as needed */
+}
+
+.services-section .card {
+  margin-bottom: 30px; /* Add space between the cards */
+}
+
+/* src/components/Header.css */
+
+.navbar-nav .nav-link {
+  font-family: 'Arial', sans-serif; /* Example font family */
+  font-weight: 500; /* Example font weight */
+}
+
+.navbar-nav .nav-link:hover {
+  color: red;
+  transition: color 0.3s ease;
+}
+
+/* src/styles/Home.css or global CSS file */
+
+.navbar-nav .nav-link:hover {
+  color: red !important; /* Change text color to red on hover */
+}
