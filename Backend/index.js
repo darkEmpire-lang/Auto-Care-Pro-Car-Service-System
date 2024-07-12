@@ -29,6 +29,10 @@ mongoose.connect(MONGODB_URI, {
 .then(() => console.log('MongoDB connected'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
+app.get("/",(req,res)=>{
+
+    res.json("Hello")
+})
 // Serve React frontend for any other routes
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
