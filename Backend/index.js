@@ -10,7 +10,7 @@ const MONGODB_URI = process.env.MONGODB_URL;
 
 // Middleware
 app.use(cors({
-    origin: 'auto-care-pro-car-service-system.vercel.app',
+    origin: 'auto-care-pro-car-service-system-c2lr.vercel.app',
     credentials: true,
 }));
 
