@@ -12,7 +12,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8005/api/auth/login', credentials);
+            const response = await axios.post('auto-care-pro-car-service-system.vercel.app/api/auth/login', credentials);
             toast.success('Logged in successfully');
             // Handle redirection or other actions after successful login
 
