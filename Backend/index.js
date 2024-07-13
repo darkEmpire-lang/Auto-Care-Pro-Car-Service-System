@@ -11,7 +11,7 @@ const MONGODB_URI = process.env.MONGODB_URL;
 // Middleware for CORS
 const allowedOrigins = [
     'https://aute-care-pro-car-service.netlify.app',
-    'http://localhost:5173', // Add this if you need local development support
+    
 ];
 
 app.use(cors({
