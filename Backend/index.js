@@ -28,7 +28,7 @@ app.use(cors({
 app.use(express.json());
 
 // Serve static files from the Vite app
-app.use(express.static(path.join(__dirname, 'vite-project/dist')));
+app.use(express.static(path.join(__dirname, 'Frontend/vite-project/dist')));
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
