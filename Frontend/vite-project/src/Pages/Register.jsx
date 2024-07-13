@@ -38,11 +38,11 @@ const Register = () => {
     return (
         <div className="container mt-4">
             <div className="row justify-content-center">
-                <div className="col-lg-6 col-md-8"> {/* Adjusted column width for mobile */}
+                <div className="col-lg-6 col-md-8">
                     <div className="card shadow">
                         <div className="card-body">
                             <h2 className="card-title text-center mb-4">Register</h2>
-                            <form onSubmit={handleRegister}>
+                            <form onSubmit={handleRegister} style={styles.form}>
                                 <div className="form-group">
                                     <label htmlFor="name">Name:</label>
                                     <input
@@ -52,6 +52,7 @@ const Register = () => {
                                         value={user.name}
                                         onChange={(e) => setUser({ ...user, name: e.target.value })}
                                         required
+                                        style={styles.input}
                                     />
                                 </div>
                                 <div className="form-group">
@@ -63,6 +64,7 @@ const Register = () => {
                                         value={user.email}
                                         onChange={(e) => setUser({ ...user, email: e.target.value })}
                                         required
+                                        style={styles.input}
                                     />
                                 </div>
                                 <div className="form-group">
@@ -74,6 +76,7 @@ const Register = () => {
                                         value={user.password}
                                         onChange={(e) => setUser({ ...user, password: e.target.value })}
                                         required
+                                        style={styles.input}
                                     />
                                 </div>
                                 <button type='submit' className="btn btn-primary btn-block">Register</button>
@@ -84,6 +87,28 @@ const Register = () => {
             </div>
         </div>
     );
+};
+
+// Internal CSS styles with media queries
+const styles = {
+    form: {
+        maxWidth: '400px',
+        margin: '0 auto'
+    },
+    input: {
+        fontSize: '16px',
+        padding: '10px'
+    },
+    // Media queries for responsiveness
+    '@media (max-width: 768px)': {
+        form: {
+            maxWidth: '100%'
+        },
+        input: {
+            fontSize: '14px',
+            padding: '8px'
+        }
+    }
 };
 
 export default Register;
