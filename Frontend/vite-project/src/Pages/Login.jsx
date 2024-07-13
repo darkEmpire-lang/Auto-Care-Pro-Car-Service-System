@@ -39,11 +39,11 @@ const Login = () => {
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
-                <div className="col-lg-6 col-md-8"> {/* Adjusted column width for mobile */}
+                <div className="col-lg-6 col-md-8">
                     <div className="card shadow">
                         <div className="card-body">
                             <h2 className="card-title text-center mb-4">Login</h2>
-                            <form onSubmit={handleLogin}>
+                            <form onSubmit={handleLogin} style={styles.form}>
                                 <div className="form-group">
                                     <label htmlFor="email">Email:</label>
                                     <input
@@ -53,6 +53,7 @@ const Login = () => {
                                         value={credentials.email}
                                         onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
                                         required
+                                        style={styles.input}
                                     />
                                 </div>
                                 <div className="form-group">
@@ -64,6 +65,7 @@ const Login = () => {
                                         value={credentials.password}
                                         onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
                                         required
+                                        style={styles.input}
                                     />
                                 </div>
                                 <button type='submit' className="btn btn-primary btn-block">Login</button>
@@ -74,6 +76,28 @@ const Login = () => {
             </div>
         </div>
     );
+};
+
+// Internal CSS styles with media queries
+const styles = {
+    form: {
+        maxWidth: '400px',
+        margin: '0 auto'
+    },
+    input: {
+        fontSize: '16px',
+        padding: '10px'
+    },
+    // Media queries for responsiveness
+    '@media (max-width: 768px)': {
+        form: {
+            maxWidth: '100%'
+        },
+        input: {
+            fontSize: '14px',
+            padding: '8px'
+        }
+    }
 };
 
 export default Login;
