@@ -37,9 +37,9 @@ const Login = () => {
     };
 
     return (
-        <div className="container mt-5"  style={{ width:"1000px",padding: "20px",  borderRadius: "5px", marginTop: "70px" }}>
+        <div className="container mt-5">
             <div className="row justify-content-center">
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-8"> {/* Adjusted column width for mobile */}
                     <div className="card shadow">
                         <div className="card-body">
                             <h2 className="card-title text-center mb-4">Login</h2>
