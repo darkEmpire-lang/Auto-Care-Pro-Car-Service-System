@@ -59,3 +59,26 @@ const Home = () => {
 };
 
 export default Home;
+
+// Media queries for responsiveness in Home.css
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .hero-section {
+    padding: 80px 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .services-section {
+    padding: 60px 0;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .contact-section {
+    padding: 80px 0;
+  }
+}
