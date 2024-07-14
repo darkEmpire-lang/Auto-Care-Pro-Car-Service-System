@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
-const API_URL = 'https://your-backend-url.vercel.app'; // Replace with your actual backend URL
+const API_URL = 'https://auto-care-pro-car-service-system.vercel.app/'; // Replace with your actual backend URL
 
 const Register = () => {
     const [user, setUser] = useState({
