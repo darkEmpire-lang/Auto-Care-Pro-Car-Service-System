@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
+const API_URL = 'https://your-backend-url.vercel.app'; // Replace with your actual backend URL
+
 const Register = () => {
     const [user, setUser] = useState({
         name: '',
@@ -19,7 +21,7 @@ const Register = () => {
         };
 
         try {
-            const response = await axios.post(`${process.env.MONGODB_URL}/api/auth/register`, newUser);
+            const response = await axios.post(`${API_URL}/api/auth/register`, newUser);
             toast.success('Registered successfully');
             setUser({ name: '', email: '', password: '' });
             setTimeout(() => {
@@ -36,7 +38,7 @@ const Register = () => {
     };
 
     return (
-        <div className="container mt-4" style={{ width: "1000px", padding: "20px", borderRadius: "5px", marginTop: "70px" }}>
+        <div className="container mt-4">
             <div className="row justify-content-center">
                 <div className="col-md-6">
                     <div className="card shadow">
@@ -45,9 +47,13 @@ const Register = () => {
                             <form onSubmit={handleRegister}>
                                 <div className="form-group">
                                     <label htmlFor="name">Name:</label>
-                                    <input type="text"class Name="form-control"  id="name" name="name"    value={user.name}
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="name"
+                                        name="name"
+                                        value={user.name}
                                         onChange={(e) => setUser({ ...user, name: e.target.value })}
-                                        autocomplete="name"
                                         required
                                     />
                                 </div>
@@ -60,7 +66,6 @@ const Register = () => {
                                         name="email"
                                         value={user.email}
                                         onChange={(e) => setUser({ ...user, email: e.target.value })}
-                                        autocomplete="email"
                                         required
                                     />
                                 </div>
@@ -73,7 +78,6 @@ const Register = () => {
                                         name="password"
                                         value={user.password}
                                         onChange={(e) => setUser({ ...user, password: e.target.value })}
-                                        autocomplete="new-password"
                                         required
                                     />
                                 </div>
@@ -88,3 +92,4 @@ const Register = () => {
 };
 
 export default Register;
+
