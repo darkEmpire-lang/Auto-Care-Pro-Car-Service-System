@@ -19,7 +19,7 @@ const Register = () => {
         };
 
         try {
-            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/register`, newUser);
+            const response = await axios.post(`${process.env.MONGODB_URL}/api/auth/register`, newUser);
             toast.success('Registered successfully');
             setUser({ name: '', email: '', password: '' });
             setTimeout(() => {
