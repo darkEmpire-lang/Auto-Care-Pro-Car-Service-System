@@ -14,7 +14,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(`${process.env.MONGODB_URL}/api/auth/login`, credentials);
+            const response = await axios.post(`${API_URL}/api/auth/login`, credentials);
             toast.success('Logged in successfully');
             // Handle redirection or other actions after successful login
 
