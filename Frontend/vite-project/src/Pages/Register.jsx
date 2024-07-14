@@ -45,12 +45,7 @@ const Register = () => {
                             <form onSubmit={handleRegister}>
                                 <div className="form-group">
                                     <label htmlFor="name">Name:</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        id="name"
-                                        name="name"
-                                        value={user.name}
+                                    <input type="text"class Name="form-control"  id="name" name="name"    value={user.name}
                                         onChange={(e) => setUser({ ...user, name: e.target.value })}
                                         autocomplete="name"
                                         required
