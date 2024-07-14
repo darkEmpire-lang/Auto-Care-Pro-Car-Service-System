@@ -12,7 +12,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('${process.env.MONGODB_URL}/api/auth/login', credentials);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, credentials);
             toast.success('Logged in successfully');
             // Handle redirection or other actions after successful login
 
@@ -50,8 +50,10 @@ const Login = () => {
                                         type='email'
                                         className="form-control"
                                         id="email"
+                                        name="email"
                                         value={credentials.email}
                                         onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
+                                        autocomplete="email"
                                         required
                                         style={styles.input}
                                     />
@@ -62,8 +64,10 @@ const Login = () => {
                                         type='password'
                                         className="form-control"
                                         id="password"
+                                        name="password"
                                         value={credentials.password}
                                         onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
+                                        autocomplete="current-password"
                                         required
                                         style={styles.input}
                                     />
