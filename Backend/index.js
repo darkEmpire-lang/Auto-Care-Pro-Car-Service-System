@@ -11,7 +11,7 @@ const MONGODB_URI = process.env.MONGODB_URL;
 
 // Middleware
 const corsOptions = {
-    origin: 'https://aute-care-pro-car-service.netlify.app',
+    origin: 'https://auto-care-pro-car-service.netlify.app',
     credentials: true,  // enable set cookie
 };
 
